@@ -53,11 +53,6 @@ namespace NG_Injector
             InitializeComponent();
         }
 
-        private void Injector_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -72,7 +67,7 @@ namespace NG_Injector
         {
             try
             {
-                Process.Start("https://discord.com/");
+                Process.Start("https://www.ngclient.download/discord");
             }
             catch (Exception ex)
             {
@@ -84,7 +79,7 @@ namespace NG_Injector
         {
             try
             {
-                Process.Start("https://ngclient.download/");
+                Process.Start("https://www.ngclient.download/");
             }
             catch (Exception ex)
             {
@@ -94,12 +89,12 @@ namespace NG_Injector
 
         private async void Inject_Click(object sender, EventArgs e)
         {
-            string gitHubRawURL = "https://github.com/tgvyhjlufctgvhj/NG-Client-dll/raw/main/NG-Client.dll";
-            string tempDir = Path.GetTempPath();
-            string savePath = Path.Combine(tempDir, "NG-Client.dll");
+            string GetDll = "https://www.ngclient.download/dll";
+            string TempPath = Path.GetTempPath();
+            string SavePath = Path.Combine(TempPath, "NG-Client.dll");
 
-            await DownloadDLLFromGitHub(gitHubRawURL, savePath);
-            InjectDLL(savePath);
+            await DownloadDLLFromGitHub(GetDll, SavePath);
+            InjectDLL(SavePath);
         }
 
         private async Task DownloadDLLFromGitHub(string url, string savePath)

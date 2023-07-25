@@ -200,7 +200,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Injector";
             this.Text = "Injector";
-            this.Load += new System.EventHandler(this.Injector_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NG)).EndInit();
             this.ResumeLayout(false);
 
